@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conner Nilmeier — Resume</title>
+  <style>
+    /* Root variables for easy theming */
+    :root{
+      --bg: #f7f7f9;
+      --card: #ffffff;
+      --accent: #0b5cff; /* change this to suit */
+      --muted: #6b7280;
+      --text: #111827;
+      --radius: 12px;
+      --max-width: 900px;
+      --gap: 22px;
+      --print-margin: 12mm;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Global reset-ish */
+    *{box-sizing: border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 20px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      line-height:1.45;
+    }
+
+    /* Container */
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 6px 30px rgba(15,23,42,0.08);
+      padding:28px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:var(--gap);
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+
+    .avatar{
+      width:96px;
+      height:96px;
+      border-radius:12px;
+      object-fit:cover;
+      border:2px solid rgba(11,92,255,0.12);
+      flex-shrink:0;
+    }
+
+    h1{font-size:1.5rem;margin:0}
+    .contact{color:var(--muted);font-size:0.95rem}
+
+    /* Two-column layout for larger screens */
+    @media(min-width:720px){
+      .container{grid-template-columns: 320px 1fr}
+      header{grid-column:1/-1}
+    }
+
+    /* Left column (sidebar) */
+    .sidebar{
+      padding:12px 8px;
+      border-radius:8px;
+      background:linear-gradient(180deg, rgba(11,92,255,0.02), transparent);
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      align-items:flex-start;
+    }
+
+    .section-title{font-weight:600;color:var(--accent);font-size:0.95rem;margin:0 0 6px 0}
+
+    ul.skills{padding-left:18px;margin:0;color:var(--text)}
+    ul.skills li{margin-bottom:8px}
+
+    /* Main content */
+    .main{padding:6px 8px}
+    .experience{margin-bottom:16px}
+    .role{font-weight:700}
+    .org{font-style:italic;color:var(--muted);font-weight:600}
+    .bullets{margin:6px 0 0 14px}
+
+    /* Footer small print */
+    footer{color:var(--muted);font-size:0.85rem;margin-top:8px}
+
+    /* Print-friendly adjustments */
+    @media print{
+      body{padding:0}
+      .container{box-shadow:none;border-radius:0}
+      @page{margin:var(--print-margin)}
+    }
+
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <img class="avatar" src="./Nilmeier_Conner.jpg" alt="Conner Nilmeier photo">
+      <div>
+        <h1>Conner Nilmeier</h1>
+        <div class="contact">1655 Discovery Road South &nbsp;•&nbsp; Madera, CA 93636</div>
+        <div class="contact">559-930-0110 &nbsp;•&nbsp; cnilmeier@pm.me</div>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <div>
+        <div class="section-title">Skills</div>
+        <ul class="skills">
+          <li>Strong communication, time management, and multitasking</li>
+          <li>Troubleshooting hardware & software (Windows, macOS, iPadOS)</li>
+          <li>Attention to detail; documentation & training</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="section-title">Certifications</div>
+        <div class="muted">CompTIA A+</div>
+      </div>
+
+      <div>
+        <div class="section-title">Tools</div>
+        <div class="muted">JAMF, Apple School Manager, Microsoft 365, Google Workspace</div>
+      </div>
+
+      <footer>Available for full‑time IT or entry‑level technical roles. References available upon request.</footer>
+    </aside>
+
+    <section class="main">
+      <div class="experience">
+        <div class="role">Technology Specialist</div>
+        <div class="org">Fresno Catholic Schools — Fresno, CA</div>
+        <ul class="bullets">
+          <li>Resolved hardware and software issues across multi‑device environment.</li>
+          <li>Maintained and upgraded network infrastructure and classroom systems.</li>
+          <li>Trained faculty and staff on educational technology and best practices.</li>
+        </ul>
+      </div>
+
+      <div class="experience">
+        <div class="role">Assistant to Technology Specialist</div>
+        <div class="org">San Joaquin Memorial High School — Fresno, CA</div>
+        <ul class="bullets">
+          <li>Provided technical support to faculty and staff; managed 500+ student iPads.</li>
+          <li>Handled device provisioning, updates, and JAMF synchronization.</li>
+          <li>Assisted with network troubleshooting and ongoing maintenance.</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="section-title">Education</div>
+        <div>Bachelor of Science in Information Systems Fresno State</div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
